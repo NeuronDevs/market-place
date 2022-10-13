@@ -53,7 +53,7 @@ _comming soon_
 
 * **name** - *[ Rol ]* - [@Paucort](https://github.com/Paucort)
 
-* **name** - *[ Rol ]* - [@JessiLopezObando](https://github.com/JessiLopezObando)
+* **Jessica Andrea López Obando** - *[ Desarrolladora ]* - [@JessiLopezObando](https://github.com/JessiLopezObando)
 
 * **name** - *[ Rol ]* - [@Waltmejia](https://github.com/waltmejia)
 
