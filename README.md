@@ -51,7 +51,7 @@ _comming soon_
 
 * **Luis Sebastian Olivares Puello** - *[ Desarollador / Administrador de BD ]* - [@iLuisolivares](https://github.com/iluisolivares)
 
-* **name** - *[ Rol ]* - [@Paucort](https://github.com/Paucort)
+* **Paula Andrea Cortes Rojas** - *[ Desarrolladora / Analista  ]* - [@Paucort](https://github.com/Paucort)
 
 * **Jessica Andrea López Obando** - *[ Desarrolladora ]* - [@JessiLopezObando](https://github.com/JessiLopezObando)
 
