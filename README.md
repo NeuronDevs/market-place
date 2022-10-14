@@ -11,7 +11,7 @@ Comming soon
 ## Descripcion del problema 📋
 
 
-_Comming soon_
+_Una fuente de desarrollo tanto económico como social son los emprendimientos, ya que amplían las posibilidades de las personas que deciden iniciarse, así como mejorar el mercado con productos o servicios innovadores. Nos proponemos plantear un modelo de sistema de información que soporte la gestión de una tienda o emprendimiento local y mejore los procesos._
 
 ## Comenzando 🌄
 ```
@@ -55,7 +55,7 @@ _comming soon_
 
 * **Jessica Andrea López Obando** - *[ Desarrolladora ]* - [@JessiLopezObando](https://github.com/JessiLopezObando)
 
-* **name** - *[ Rol ]* - [@Waltmejia](https://github.com/waltmejia)
+* **Walter Yesid Mejía chimá** - *[ Desarrollador / Scrum Master ]* - [@Waltmejia](https://github.com/waltmejia)
 
 * **Sergio Alejandro Quintero Puentes** - *[ Desarrollador ]* - [@Sergioqp82](https://github.com/sergioqp82)
 
