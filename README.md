@@ -57,7 +57,7 @@ _comming soon_
 
 * **name** - *[ Rol ]* - [@Waltmejia](https://github.com/waltmejia)
 
-* **name** - *[ Rol ]* - [@Sergioqp82](https://github.com/sergioqp82)
+* **Sergio Alejandro Quintero Puentes** - *[ Desarrollador ]* - [@Sergioqp82](https://github.com/sergioqp82)
 
 ---
 
