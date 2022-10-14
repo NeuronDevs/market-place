@@ -55,7 +55,7 @@ _comming soon_
 
 * **Jessica Andrea López Obando** - *[ Desarrolladora ]* - [@JessiLopezObando](https://github.com/JessiLopezObando)
 
-* **name** - *[ Rol ]* - [@Waltmejia](https://github.com/waltmejia)
+* **Walter Yesid Mejía chimá** - *[ Desarrollador / Scrum Master ]* - [@Waltmejia](https://github.com/waltmejia)
 
 * **Sergio Alejandro Quintero Puentes** - *[ Desarrollador ]* - [@Sergioqp82](https://github.com/sergioqp82)
 
