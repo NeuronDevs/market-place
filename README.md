@@ -51,13 +51,17 @@ _comming soon_
 
 * **Luis Sebastian Olivares Puello** - *[ Desarollador / Administrador de BD ]* - [@iLuisolivares](https://github.com/iluisolivares)
 
+<<<<<<< HEAD
 * **Paula Andrea Cortes Rojas** - *[ Desarrollador/ Analista ]* - [@Paucort](https://github.com/Paucort)
+=======
+* **Paula Andrea Cortes Rojas** - *[ Desarrolladora / Analista  ]* - [@Paucort](https://github.com/Paucort)
+>>>>>>> 2793b08eb1da94d2287280a93b5532c9711d18ce
 
-* **name** - *[ Rol ]* - [@JessiLopezObando](https://github.com/JessiLopezObando)
+* **Jessica Andrea López Obando** - *[ Desarrolladora ]* - [@JessiLopezObando](https://github.com/JessiLopezObando)
 
 * **name** - *[ Rol ]* - [@Waltmejia](https://github.com/waltmejia)
 
-* **name** - *[ Rol ]* - [@Sergioqp82](https://github.com/sergioqp82)
+* **Sergio Alejandro Quintero Puentes** - *[ Desarrollador ]* - [@Sergioqp82](https://github.com/sergioqp82)
 
 ---
 
