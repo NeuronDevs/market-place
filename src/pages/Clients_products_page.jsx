@@ -1,14 +1,13 @@
 import React from 'react'
+import { Products } from '../components/Products';
 
 const Clients_products_page = () => {
   return (
-    <div className='container'>
-        
-       
-        Clients_products_page
-
-
-    </div>
+   <div className='p-4 container'>
+    <h4>Productos</h4>
+    <Products></Products>    
+   </div>
+ 
   )
 }
 
