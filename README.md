@@ -11,8 +11,12 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+<<<<<<< HEAD
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+=======
+_Una fuente de desarrollo tanto económico como social son los emprendimientos, ya que amplían las posibilidades de las personas que deciden iniciarse, así como mejorar el mercado con productos o servicios innovadores. Nos proponemos plantear un modelo de sistema de información que soporte la gestión de una tienda o emprendimiento local y mejore los procesos._
+>>>>>>> f9f5d7be9597f1cf183a68e57181715c0959470b
 
 ### `npm test`
 
@@ -57,13 +61,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
+<<<<<<< HEAD
 ### Advanced Configuration
+=======
+* **Paula Andrea Cortes Rojas** - *[ Desarrolladora / Analista  ]* - [@Paucort](https://github.com/Paucort)
+>>>>>>> f9f5d7be9597f1cf183a68e57181715c0959470b
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+<<<<<<< HEAD
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+=======
+* **Walter Yesid Mejía chimá** - *[ Desarrollador / Scrum Master ]* - [@Waltmejia](https://github.com/waltmejia)
+
+* **Sergio Alejandro Quintero Puentes** - *[ Desarrollador ]* - [@Sergioqp82](https://github.com/sergioqp82)
+
+---
+
+_<p align="center">NeuronDevs - Copyright© 2022.</p>_
+>>>>>>> f9f5d7be9597f1cf183a68e57181715c0959470b
 
 ### `npm run build` fails to minify
 
