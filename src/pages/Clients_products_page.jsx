@@ -2,11 +2,10 @@ import React from 'react'
 
 const Clients_products_page = () => {
   return (
-    <div>
-        <h1>Agregando bootstrap</h1>
+    <div className='container'>
+        
+       
         Clients_products_page
-
-
 
 
     </div>
