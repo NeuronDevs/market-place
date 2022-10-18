@@ -1,66 +1,70 @@
-# Proyecto Market - Ciclo4 
+# Getting Started with Create React App
 
-## Aplicacion web 🚀
-```
-Comming soon
-```
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-<b> Equipo</b> _NeuronDevs_
+In the project directory, you can run:
 
-## Descripcion del problema 📋
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-_Comming soon_
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Comenzando 🌄
-```
-Git clone https://github.com/NeuronDevs/market-place.git
-```
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Historias de usuario 👨🏻‍💻
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<a href='https://drive.google.com/file/d/124ek_O5hvkNkRYA757MvwE0VTTB6yx9q/view?usp=sharing'>Ver historias de usuario</a>
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Modelo entidad-relacion 🧩
-_comming soon_
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Herramientas usadas 🛠
-<p align="center"> <img  src= "https://i.ibb.co/R34X8k3/image.png"/> </p>
+## Learn More
 
-* [ReactJS](https://reactjs.org/) - Javascript library | Frontend language.
-* [ExpressJs](https://expressjs.com/) - Backend framework for building RESTful APIs.
-* [MongoDB](https://www.mongodb.com/) - Non-Relational Database.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Arquitectura del sistema 🏛
+### Code Splitting
 
-<p align="center"> <img  src= "https://i.ibb.co/BwPWx4n/image.png"/> </p>
-<p align="center"> <img  src= "https://i.ibb.co/bNvyjD2/image.png"/> </p>
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## Autores ✒️
+### Making a Progressive Web App
 
-* **Luis Sebastian Olivares Puello** - *[ Desarollador / Administrador de BD ]* - [@iLuisolivares](https://github.com/iluisolivares)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-* **name** - *[ Rol ]* - [@Paucort](https://github.com/Paucort)
+### Advanced Configuration
 
-* **Jessica Andrea López Obando** - *[ Desarrolladora ]* - [@JessiLopezObando](https://github.com/JessiLopezObando)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-* **name** - *[ Rol ]* - [@Waltmejia](https://github.com/waltmejia)
+### Deployment
 
-* **name** - *[ Rol ]* - [@Sergioqp82](https://github.com/sergioqp82)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
----
+### `npm run build` fails to minify
 
-_<p align="center">NeuronDevs - Copyright© 2022.</p>_
-
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
