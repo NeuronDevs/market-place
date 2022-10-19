@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState }  from 'react'
+import { ConfirmModal } from './ConfirmModal'
 
-export const Product = ({name, price, img}) => {
+export const Product = ({id,name, price, img}) => {
+
+  const [idModal, setidModal] = useState( `Modal-${id}`);
+
   return (
     <div className="col"> 
         <div className="card m-2" >
@@ -8,7 +12,11 @@ export const Product = ({name, price, img}) => {
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">{price}</p>
-                <a href="./" className="btn btn-primary">Comprar</a>
+                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#${idModal}`}>
+                Comprar
+                </button>
+                <ConfirmModal name={name} price={price} img={img} lot={2} idModal={idModal}></ConfirmModal>
+
             </div>
         </div>
     </div>
