@@ -4,7 +4,7 @@ export const ConfirmModal = ({name, price, lot, idModal, img}) => {
   
     
   return (
-    <div className="modal fade" id={idModal} tabI   ndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade" id={idModal} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
             <div className="modal-content">
             <div className="modal-header">

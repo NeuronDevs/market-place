@@ -1,0 +1,23 @@
+.background-p {
+    background-color: rgb(6, 179, 247);
+}
+
+.selected {
+    color: #fff;
+    background-color: rgb(143, 71, 210);
+
+}
+
+.selected:hover {
+    text-shadow: 0 0 100px #fff;
+    color: rgb(143, 71, 210) !important;
+    background-color: #fff;
+
+}
+
+.image-container {}
+
+.card-img-style {
+    height: 200px;
+    object-fit: cover;
+}

@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles/styles.css'
 
 export const Header = () => {
   return (
-    <nav className="p-3 navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="p-3 navbar navbar-expand-lg navbar-dark background-p">
   <div className="container-fluid">
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -23,10 +24,18 @@ export const Header = () => {
           <a className="nav-link" href="./">Seccion 3</a>
         </li>
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-light" type="submit">Search</button>
-      </form>
+      <ul className="navbar-nav ">
+              <li className="nav-item ">
+                <a href="/" className="btn m-3 selected">
+                  Iniciar sesión
+                </a>
+              </li>
+              <li className="nav-item">
+                  <a href="/" className="btn selected m-3">
+                    Registrarse
+                  </a>
+              </li>
+          </ul>
     </div>
   </div>
 </nav>
