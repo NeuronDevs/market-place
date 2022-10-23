@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react'
 
-
 function useFetch(ruta) {
-
+    const [isLoading, setIsLoading] = useState(true);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("json/products.json")
-            .then(response => response.json())
-            .then(datos => console.log(datos))
+        const loadData = async () => {
+            const result = await fetch(ruta)
+                .then(response => response.json())
+                .then(datos => datos)
+            setProducts(result);
+            setIsLoading(false);
+        }
+        loadData();
 
     }, []);
 
-    return products;
+    return { isLoading, products };
 
 }
 

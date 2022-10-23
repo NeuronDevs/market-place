@@ -1,34 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import useFetch from '../hooks/useFetch';
 import { Product } from './Product'
 
 
 
-function useFetch() {
-    const [isLoading, setIsLoading] = useState(true);
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-      const  loadData = async() =>{
-        const result = await fetch("jsons/products.json")
-        .then(response => response.json())
-        .then(datos => datos)
-        setProducts(result);
-        setIsLoading(false);
-      }
-      loadData();
-
-    }, []);
-
-    return {isLoading, products};
-
-}
-
 export const Products = () => {
-  
+  const ruta = "jsons/products.json"
  
-  const {isLoading, products} = useFetch();
-  console.log(products);
+  const {isLoading, products} = useFetch(ruta);
 
   return (
     <div className="p-4 container text-center">
@@ -41,8 +21,6 @@ export const Products = () => {
         : products.map(product => (
           <Product key={product.id} lot={product.lot} id={product.id} name={product.name} price={product.price} img={product.img}></Product>
         ))
-        
-         
         } 
     
 
