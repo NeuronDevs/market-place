@@ -1,4 +1,4 @@
-import axios from 'axios';
+//import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import useFetch from '../hooks/useFetch';
 import { Product } from './Product'
