@@ -6,9 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import New_product_page from './pages/New_product_page';
 import Clients_products_page from './pages/Clients_products_page';
-import New_product_page from './pages/New_product_page';
-import { NotFound } from './pages/NotFound';
 import Sales_page from './pages/Sales_page';
+import { NotFound } from './pages/NotFound';
 function App() {
   return (
 
