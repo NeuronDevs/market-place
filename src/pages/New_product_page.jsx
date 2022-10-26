@@ -11,9 +11,14 @@ const New_product_page = () => {
 
     <EditProduct id={0} price={0} name={'Nuevo'} img={'../NO_PHOTO.png'}></EditProduct>  
         </div>
-    </div>
+       
+
+
+
+        </div>
    </>
   )
 }
 
 export default New_product_page;
+
