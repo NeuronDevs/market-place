@@ -22,7 +22,6 @@ export const AdminListProduct = () => {
         ))
         } 
     
-
       </div>
     </div>
   )
