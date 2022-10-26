@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../hooks/useFetch';
-import { Product } from './Product'
+import { ProductAdmin } from './ProductAdmin'
 
 
 
-export const Products = () => {
+export const AdminListProduct = () => {
   const ruta = "jsons/products.json"
  
   const {isLoading, products} = useFetch(ruta);
@@ -18,11 +18,10 @@ export const Products = () => {
         ?   <p>Esta cargando...</p> 
         
         : products.map(product => (
-          <Product key={product.id} lot={product.lot} id={product.id} name={product.name} price={product.price} img={product.img}></Product>
+          <ProductAdmin key={product.id} lot={product.lot} id={product.id} name={product.name} price={product.price} img={product.img}></ProductAdmin>
         ))
         } 
     
-
       </div>
     </div>
   )
