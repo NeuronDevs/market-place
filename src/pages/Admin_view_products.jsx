@@ -1,11 +1,11 @@
 import React from 'react'
-import { Products } from '../components/Products';
+import { AdminListProduct } from '../components/AdminListProduct';
 
 const Admin_view_products= () => {
   return (
    <div className='p-4 container'>
-    <h4>Administrar Productos</h4>
-    <Products></Products>    
+    <h4>Administrador - Lista de Productos</h4>
+    <AdminListProduct></AdminListProduct>    
    </div>
  
   )
