@@ -8,6 +8,10 @@ export const Sales = () => {
     const ruta = "jsons/sales.json"
 
     const { isLoading, products } = useFetch(ruta);
+    let total=0;
+    for(let i=0;i<products.length;i++){
+        total=total+products[i].total;
+    }
 
     return (
         <div className="container">
@@ -30,6 +34,10 @@ export const Sales = () => {
                                     <SaleRow id={product.id} date={product.date} total={product.total}></SaleRow>
                                 ))
                         }
+                        <tr>
+                            <th colspan="2">Total</th>
+                            <th>${total}</th>
+                        </tr>
                     </table>
                 </div >
             </div ></div>

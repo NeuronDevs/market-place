@@ -9,7 +9,7 @@ export const SaleRow = ({ id, date , total }) => {
         <tr>
             <td>{date}</td>
             <td><a href="#">{id}</a></td>
-            <td>{total}</td>
+            <td>${total}</td>
         </tr>
     )
 }
