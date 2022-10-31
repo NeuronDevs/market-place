@@ -22,8 +22,15 @@
     object-fit: cover;
 }
 
+.tabla-normal th,.tabla-normal td{
+    text-align:center;
+}
+.tabla-normal tr td:last-child{
+    text-align:right;
+    padding-right:10px;
+}
 
-
-.ancho-columna{
-    width:300px
+.tabla-normal, .tabla-normal tr,.tabla-normal th,.tabla-normal td{
+    border: 1px solid black;
+    border-collapse: collapse;
 }

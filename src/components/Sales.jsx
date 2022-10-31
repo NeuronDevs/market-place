@@ -15,8 +15,8 @@ export const Sales = () => {
 
     return (
         <div className="container">
-                    <table className="table mx-auto table-bordered" style={{"maxWidth":"300px"}}>
-                    <th colspan="3" className="ancho-columna"><h3 className="text-center">Ventas</h3></th>
+                    <table className="my-3 table mx-auto table-bordered tabla-normal" style={{"maxWidth":"300px"}}>
+                    <th colspan="3"><h3 className="text-center">Ventas</h3></th>
                         <tr>
                             <th>Fecha</th>
                             <th>IdVenta</th>
