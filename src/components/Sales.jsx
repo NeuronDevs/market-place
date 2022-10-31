@@ -14,10 +14,10 @@ export const Sales = () => {
     }
 
     return (
-        <div className="container text-left">
-                    <table className="table mx-auto " style={{"maxWidth":"300px"}}>
+        <div className="container">
+                    <table className="table mx-auto table-bordered" style={{"maxWidth":"300px"}}>
                     <th colspan="3" className="ancho-columna"><h3 className="text-center">Ventas</h3></th>
-                        <tr className="text-left">
+                        <tr>
                             <th>Fecha</th>
                             <th>IdVenta</th>
                             <th>Total</th>
@@ -33,8 +33,8 @@ export const Sales = () => {
                                 ))
                         }
                         <tr>
-                            <th colspan="2">Total</th>
-                            <th>${total}</th>
+                            <td align="center" colspan="2"><b>Total</b></td>
+                            <td align="right"><b>${total}</b></td>
                         </tr>
                     </table>
                 </div >
