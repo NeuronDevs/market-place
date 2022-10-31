@@ -18,10 +18,13 @@ export const Header = () => {
               <a className="nav-link" href="./carrito">Carrito</a>
             </li>
             <li key={3} className="nav-item">
-              <a className="nav-link" href="./">Seccion 2</a>
+              <a className="nav-link" href="./administrar_productos">Productos</a>
+            </li>
+            <li key={3} className="nav-item">
+              <a className="nav-link" href="./ventas">Ventas</a>
             </li>
             <li key={4} className="nav-item">
-              <a className="nav-link" href="./">Seccion 3</a>
+              <a className="nav-link" href="./nuevo_producto">Nuevo producto</a>
             </li>
           </ul>
           <ul className="navbar-nav ">
