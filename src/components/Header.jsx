@@ -18,7 +18,7 @@ export const Header = () => {
               <a className="nav-link" href="./carrito">Carrito</a>
             </li>
             <li key={3} className="nav-item">
-              <a className="nav-link" href="./administrar_productos">Productos</a>
+              <a className="nav-link" href="./admin/dashboard">Admin</a>
             </li>
             <li key={3} className="nav-item">
               <a className="nav-link" href="./ventas">Ventas</a>
