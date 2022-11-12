@@ -39,8 +39,8 @@ function App() {
         console.log(response);
         if (response.data.success) {
           setAuth(true);
-          // setRole(response.data.user.role);
-          setRole("admin")
+          setRole(response.data.user.role);
+          // setRole("admin")
         }
       }).catch(function (error) {
         Swal.fire(
