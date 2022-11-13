@@ -7,6 +7,7 @@ import Dashboard from './components/admin/Dashboard';
 
 import Clients_products_page from './pages/Clients_products_page';
 import Cart_products_page from './pages/Cart_products_page';
+import Order_products_page from './pages/Order_products_page';
 import Admin_view_products from './pages/Admin_view_products';
 import New_product_page from './pages/New_product_page';
 import { NotFound } from './pages/NotFound';
@@ -68,6 +69,8 @@ function App() {
               <Routes>
                 <Route path='/' element={<Clients_products_page />}></Route>
                 <Route path='/carrito' element={<Cart_products_page />}></Route>
+                <Route path='/orden' element={<Order_products_page />}></Route>
+                
                 <Route path='/productos' element={<Clients_products_page />}></Route>
                 <Route path='*' element={<NotFound />}></Route>
               </Routes>

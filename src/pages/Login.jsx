@@ -36,8 +36,11 @@ export const Login = ({setAuth, setRole}) => {
                 'success'
               )
             navigate("/")
+            setLoading(false)
+
         }
     }).catch(function (error) {
+      setLoading(false)
         Swal.fire(
             'Error!',
             error.response.data.message.msj,

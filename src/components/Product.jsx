@@ -17,7 +17,7 @@ export const Product = (props) => {
           <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#${idModal}`}>
             Comprar
           </button>
-          <ConfirmModal id={props.id} name={props.name} price={props.price} img={props.img} lot={props.lot} idModal={idModal}></ConfirmModal>
+          <ConfirmModal id={props.id} name={props.name} price={props.price} images={props.images} lot={props.lot} idModal={idModal}></ConfirmModal>
 
         </div>
       </div>
