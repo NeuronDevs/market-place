@@ -28,14 +28,9 @@ export const Header = () => {
             </li>
           </ul>
           <ul className="navbar-nav ">
-            <li key={5} className="nav-item ">
-              <a href="/" className="btn m-3 selected">
-                Iniciar sesión
-              </a>
-            </li>
             <li key={6} className="nav-item">
               <a href="/" className="btn selected m-3">
-                Registrarse
+                Cerrar sesión
               </a>
             </li>
           </ul>

@@ -39,7 +39,7 @@ function App() {
         console.log(response);
         if (response.data.success) {
           setAuth(true);
-          setRole(response.data.user.role);
+          setRole(response.data.user.role); //comentar esto
           // setRole("admin")
         }
       }).catch(function (error) {
