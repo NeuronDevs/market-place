@@ -16,6 +16,7 @@ export const ConfirmModal = (props) => {
         }
         function addInCart(cartSession, product) {
             let prodFound = cartSession.findIndex((x) => x.id === product.id);
+            product.product = product.id;
             if (prodFound !== -1) {
                 cartSession[prodFound] = product;
             } else {
@@ -49,8 +50,8 @@ export const ConfirmModal = (props) => {
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        <img src={props.img} style={{maxHeight: "300px"}} className="p-2 rounded mx-auto d-block props.img-fluid" alt="..." />
-                        <input defaultValue={cantP} min={1} max={props.lot} onChange={e => { setCantP(e.target.value); setTotalProducts(cantP * props.price); }} type="number" />
+                        <img src={props.images} style={{ maxHeight: "300px" }} className="p-2 rounded mx-auto d-block props.img-fluid" alt="..." />
+                        <input defaultValue={cantP} min={1} max={props.lot} onChange={e => { setCantP(e.target.value); setTotalProducts(e.target.value * props.price); }} type="number" />
                         <h5>Precio: {props.price}</h5>
                         <p>Quedan {props.lot}</p>
                         <p>Total: {totalProducts}</p>

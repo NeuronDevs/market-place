@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export const Cart = () => {
 
@@ -39,28 +40,22 @@ export const Cart = () => {
         calculateTotalCart();
     }
 
-    const buy = () => {
-        //TODO: terminar esta vaina
-        alert('Aquí comprar');
-    }
     useEffect(() => {
-        const calculateTotalCartIntern = () => {
-            let totalIntern = 0;
-            cartSession.forEach((x) => {
-                totalIntern = totalIntern + x.total;
-            });
-            setTotal(totalIntern);
-        }
+
         function getCart() {
             return JSON.parse(localStorage.getItem('cart'));
         }
-        let cartSessionIntern = getCart();
-        if (cartSessionIntern === null) {
-            cartSessionIntern = [];
-        }
-        setCartSession(cartSessionIntern);
-        calculateTotalCartIntern();
-    }, []);
+        setTimeout(() => {
+            let cartSessionIntern = getCart();
+            if (cartSessionIntern === null) {
+                cartSessionIntern = [];
+            }
+            setCartSession(cartSessionIntern);
+            calculateTotalCart();
+        }, 300)
+
+    });
+
     return (
         <div className="container">
             <div className="row">
@@ -102,7 +97,8 @@ export const Cart = () => {
 
                     <p><strong>Total: </strong>{total}</p>
                     <button className="btn btn-warning" onClick={emptyCart}>Cancelar</button>
-                    <button className="btn btn-primary" onClick={buy}>Comprar</button>
+
+                    <NavLink className="btn btn-primary" to="/orden">Comprar</NavLink>
                 </div >
             </div >
         </div>
