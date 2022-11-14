@@ -19,11 +19,11 @@ export const EditProduct = ({ id, name, setName, price, setPrice, description, s
             </div>
             <div class="mb-3">
               <label for="productStock" class="form-label">Stock</label>
-              <input required min={1} defaultValue={stock} onChange={(e)=>{setStock(e.target.value)}} type="number" class="form-control" id="productPrice" placeholder="Stock" />
+              <input required min={1} value={stock} onChange={(e)=>{setStock(e.target.value)}} type="number" class="form-control" id="productPrice" placeholder="Stock" />
             </div>
             <div class="mb-3">
               <label for="productPrice" class="form-label">Precio</label>
-              <input required min={1} defaultValue={price} onChange={(e)=>{setPrice(e.target.value)}} type="number" class="form-control" id="productPrice" placeholder="Precio"  />
+              <input required min={1} value={price} onChange={(e)=>{setPrice(e.target.value)}} type="number" class="form-control" id="productPrice" placeholder="Precio"  />
             </div>
             <div class="mb-3">
               <label for="productDescription" class="form-label">Descripci&oacute;n</label>

@@ -20,7 +20,7 @@ export const HeaderAdmin = () => {
               <NavLink className="nav-link" to="./ventas">Ventas</NavLink>
             </li>
             <li key={3} className="nav-item">
-              <NavLink className="nav-link" to="./nuevo_producto">Nuevo producto</NavLink>
+              <NavLink className="nav-link" to="./nuevo_producto">Productos</NavLink>
             </li>
           </ul>
         </div>
