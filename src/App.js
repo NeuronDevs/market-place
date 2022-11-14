@@ -41,7 +41,8 @@ function App() {
         if (response.data.success) {
           setAuth(true);
           setRole(response.data.user.role); //comentar esto
-          // setRole("admin")
+          //setRole("admin")
+          //setRole("user")
         }
       }).catch(function (error) {
         Swal.fire(
