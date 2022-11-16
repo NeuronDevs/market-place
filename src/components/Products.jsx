@@ -5,7 +5,7 @@ import { Product } from './Product'
 
 
 export const Products = () => {
-  const ruta = "http://localhost:4000/api/admin_productos"
+  const ruta = "http://localhost:4000/api/productos"
 
   const { isLoading, products } = useFetch(ruta);
   console.log(products.products);
