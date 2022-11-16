@@ -20,6 +20,7 @@ import Swal from 'sweetalert2';
 import { HeaderClient } from './components/client/HeaderClient';
 import { HeaderAdmin } from './components/admin/HeaderAdmin';
 import { AuthHeader } from './components/auth/AuthHeader';
+import { Update_product } from './pages/Update_product';
 
 function App() {
   const [auth, setAuth] = useState(true);
@@ -40,8 +41,8 @@ function App() {
         console.log(response);
         if (response.data.success) {
           setAuth(true);
-         // setRole(response.data.user.role); //comentar esto
-           setRole("admin")
+          setRole(response.data.user.role); //comentar esto
+          // setRole("admin")
         }
       }).catch(function (error) {
         Swal.fire(
@@ -82,6 +83,7 @@ function App() {
                   <Route path='/ventas' element={<Sales_page />}></Route>
                   <Route path='/nuevo_producto' element={<New_product_page />}></Route>
                   <Route path='/administrar_productos' element={<Admin_view_products />}></Route>
+                  <Route path='/update/producto/:id' element={<Update_product></Update_product>}></Route>
                   <Route path='*' element={<NotFound />}></Route>
                 </Routes>
               </>
