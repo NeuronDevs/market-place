@@ -39,13 +39,16 @@ export const HeaderAdmin = () => {
           <NavLink className="navbar-brand" to="./">Market place</NavLink>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li key={1} className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="./">Inicio</NavLink>
+              <NavLink className="nav-link" aria-current="page" to="./">Inicio</NavLink>
             </li>
             <li key={2} className="nav-item">
               <NavLink className="nav-link" to="./ventas">Ventas</NavLink>
             </li>
             <li key={3} className="nav-item">
               <NavLink className="nav-link" to="./nuevo_producto">Productos</NavLink>
+            </li>
+            <li key={3} className="nav-item">
+              <NavLink className="nav-link" to="./usuarios">Usuarios</NavLink>
             </li>
           </ul>
 
