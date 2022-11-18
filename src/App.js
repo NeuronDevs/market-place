@@ -80,7 +80,7 @@ function App() {
               <>
                 <HeaderAdmin></HeaderAdmin >
                 <Routes>
-                  <Route path='/' element={<Dashboard />}></Route>
+                  <Route path='/' element={<Admin_view_products />}></Route>
                   <Route path='/ventas' element={<Sales_page />}></Route>
                   <Route path='/nuevo_producto' element={<New_product_page />}></Route>
                   <Route path='/administrar_productos' element={<Admin_view_products />}></Route>
