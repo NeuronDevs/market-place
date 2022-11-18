@@ -8,7 +8,7 @@ const Admin_view_products= () => {
   return (
    <div className='p-4 container'>
     <div className="text_rigth">
-        <Button variant='contained' color="primary"  endIcon={<AddCircle />}>
+        <Button variant='contained' color="primary"  endIcon={<AddCircle />} href='/nuevo_producto'>
         Añadir
         </Button>
     </div>

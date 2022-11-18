@@ -21,7 +21,7 @@ export const ProductAdmin = (props) => {
             <p className="card-text">{props.price}</p>
             
             <Stack direction="row" spacing={1} className='justify_text'>
-              <Button variant='contained' color="primary" startIcon={<Edit />}>
+              <Button variant='contained' color="primary" startIcon={<Edit />} href='/update/producto/:id'>
               Editar
               </Button>
               <Button variant='contained' color="secondary" startIcon={<Delete />}>
