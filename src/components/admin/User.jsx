@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import  Axios  from 'axios';
+import Swal from 'sweetalert2'
+
 
 export const User = ({id, name, avatar,email,role}) => {
 
@@ -25,6 +27,29 @@ export const User = ({id, name, avatar,email,role}) => {
 
     }
 
+    const handleDelete = () =>{
+        const options =  {
+            method: 'DELETE',
+            url: ruta,
+            withCredentials: true
+        }
+
+        Axios.request(options).then((response) => {
+            console.log(response);
+            if(response.data.success){
+                Swal.fire(
+                    'Bien!',
+                    'Has eliminado el usuario!',
+                    'success'
+                  )    
+            }
+        
+        }).catch((error) => {
+           console.log(error)
+        });
+
+    }
+
   return (
     <div className="col">
     <div className="card m-2" >
@@ -40,7 +65,7 @@ export const User = ({id, name, avatar,email,role}) => {
             <option value="admin">Admin</option> 
             </select   > 
       
-        <button type="button" className="btn btn-danger" >
+        <button onClick={handleDelete} type="button" className="btn btn-danger" >
           Eliminar
         </button>
       </div>
