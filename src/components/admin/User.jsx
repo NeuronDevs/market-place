@@ -4,7 +4,7 @@ import  Axios  from 'axios';
 import Swal from 'sweetalert2'
 
 
-export const User = ({id, name, avatar,email,role}) => {
+export const User = ({id, name, avatar,email,role,users,setUsers}) => {
 
     const ruta = `http://localhost:4000/api/user/${id}`;
 
@@ -28,6 +28,9 @@ export const User = ({id, name, avatar,email,role}) => {
     }
 
     const handleDelete = () =>{
+
+      const newData = users.filter((item) => item._id !== id)
+
         const options =  {
             method: 'DELETE',
             url: ruta,
@@ -42,8 +45,9 @@ export const User = ({id, name, avatar,email,role}) => {
                     'Has eliminado el usuario!',
                     'success'
                   )    
+                  setUsers(newData);
             }
-        
+  
         }).catch((error) => {
            console.log(error)
         });

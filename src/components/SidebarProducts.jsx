@@ -8,7 +8,20 @@ import { ItemProduct } from './ItemProduct';
 export const SidebarProducts = () => {
   const ruta = "http://localhost:4000/api/productos"
  
-  const {isLoading, products} = useFetch(ruta);
+  const [isLoading, setIsLoading] = useState(true);
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const loadData = async () => {
+            const result = await fetch(ruta)
+                .then(response => response.json())
+                .then(datos => datos)
+            setProducts({products:result.products});
+            setIsLoading(false);
+        }
+        loadData();
+
+    }, []);
 
   const [search, setSearch] = useState ("");
   
@@ -39,7 +52,7 @@ export const SidebarProducts = () => {
           return product.name.toUpperCase().includes(search.toUpperCase())}
           
           ).map(product2 =>  {
-          return (<ItemProduct name={product2.name} id={product2._id} ></ItemProduct>)})
+          return (<ItemProduct name={product2.name} id={product2._id} products={products} setProducts={setProducts}></ItemProduct>)})
           
          
         } 

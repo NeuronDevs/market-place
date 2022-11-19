@@ -49,7 +49,7 @@ export const Users = () => {
             (  <p>No hay Usuarios...</p>)
             :
             (users.map(({_id, name, avatar, email, role}, index) => (
-                <User key={index} id={_id} name={name} avatar={avatar} email={email} role={role} ></User>
+                <User key={index} id={_id} name={name} avatar={avatar} email={email} role={role} users={users} setUsers={setUsers}></User>
             )))
             }
   

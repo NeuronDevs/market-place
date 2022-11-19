@@ -37,10 +37,8 @@ const New_product_page = () => {
                     'Has creado un nuevo producto!',
                     'success'
                   )    
-                  setDescription("");
-                  setName("");
-                  setPrice(10000);
-                  setStock(1);
+                
+                  window.location.replace('');
             }
         
         }).catch((error) => {

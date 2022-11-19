@@ -3,18 +3,22 @@ import { Link } from 'react-router-dom'
 import  Axios  from 'axios';
 import Swal from 'sweetalert2'
 
-export const ItemProduct = ({ id, name }) => {
+export const ItemProduct = ({ id, name, products, setProducts }) => {
 
     
     const ruta = `http://localhost:4000/api/producto/${id}`
 
     const handleDelete = () =>{
+        console.log(products.products.filter((item) => item._id !== id))
+        const newData = products.products.filter((item) => item._id !== id)
+      
+        
         const options =  {
             method: 'DELETE',
             url: ruta,
             withCredentials: true
         }
-
+        
         Axios.request(options).then((response) => {
             console.log(response);
             if(response.data.success){
@@ -22,7 +26,8 @@ export const ItemProduct = ({ id, name }) => {
                     'Bien!',
                     'Has eliminado el producto!',
                     'success'
-                  )    
+                    )    
+                    setProducts({products:newData});
             }
         
         }).catch((error) => {
