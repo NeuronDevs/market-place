@@ -83,7 +83,7 @@ export const Cart = () => {
                                     cartSession.map(product => (
                                         <tr>
                                             <td>{product.cant}</td>
-                                            <td><img src={product.img} height="90" width="90" alt={product.name} /></td>
+                                            <td><img src={product.images} height="90" width="90" alt={product.name} /></td>
                                             <td>{product.name}</td>
                                             <td>{product.price}</td>
                                             <td>{product.total}</td>

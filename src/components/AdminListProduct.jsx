@@ -21,7 +21,7 @@ export const AdminListProduct = () => {
             (  <p>No hay productos...</p>)
             :
             (products.products.map((product, index) => (
-              <ProductAdmin key={index} lot={product.stock} id={product._id} name={product.name} price={product.price} images={product.images[0]?.url}></ProductAdmin>
+              <ProductAdmin key={index} lot={product.stock} id={product._id} name={product.name} price={product.price} img={product.images[0]?.url}></ProductAdmin>
             )))
         }
 

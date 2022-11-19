@@ -5,7 +5,7 @@ import { Product } from './Product'
 
 
 export const Products = () => {
-  const ruta = "http://localhost:4000/api/productos"
+  const ruta = "http://localhost:4000/api/inventario"
 
   const { isLoading, products } = useFetch(ruta);
   console.log(products.products);
@@ -21,7 +21,7 @@ export const Products = () => {
             (  <p>No hay productos...</p>)
             :
             (products.products.map((product, index) => (
-              <Product key={index} lot={product.stock} id={product.id} name={product.name} price={product.price} images={product.images[0]?.url}></Product>
+              <Product key={index} lot={product.stock} id={product._id} name={product.name} price={product.price} images={product.images[0]?.url}></Product>
             )))
         }
 
