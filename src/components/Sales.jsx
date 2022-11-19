@@ -1,4 +1,4 @@
-import useFetch from '../hooks/useFetch'
+import React, { useEffect, useState } from 'react'
 import { SaleRow } from './SaleRow'
 
 
@@ -6,7 +6,31 @@ import { SaleRow } from './SaleRow'
 export const Sales = () => {
     const ruta = "http://localhost:4000/api/admin/orders"
 
-    const { isLoading, products } = useFetch(ruta,true);
+    
+    
+    function useFetch(ruta, isAdmin = false) {
+        isAdmin = isAdmin ? true : 'same-origin';
+        const [isLoading, setIsLoading] = useState(true);
+        const [products, setProducts] = useState([]);
+    
+        useEffect(() => {
+            const loadData = async () => {
+                const result = await fetch(ruta, { credentials: true })
+                .then(response => response.json())
+                    .then(datos => datos)
+                console.log(result);
+                setProducts(result);
+                setIsLoading(false);
+            }
+            loadData();
+            
+        }, []);
+    
+        return { isLoading, products };
+        
+    }
+    
+    const { isLoading, products } = useFetch(ruta);
     console.log(products);
     console.log(products.cantidadTotal);
 

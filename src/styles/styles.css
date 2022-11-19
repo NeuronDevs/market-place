@@ -49,6 +49,19 @@
   font-size: 0.9rem;
 }
 
+.text_rigth{
+  text-align: right;
+}
+
+.justify_text{
+  justify-content: center;
+}
+
+
+.space_button{
+  margin-right: 10px;
+}
+
 /* Admin Sidebar */
 
 .sidebar-wrapper {
