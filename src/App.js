@@ -21,6 +21,7 @@ import { HeaderClient } from './components/client/HeaderClient';
 import { HeaderAdmin } from './components/admin/HeaderAdmin';
 import { AuthHeader } from './components/auth/AuthHeader';
 import { Update_product } from './pages/Update_product';
+import { Admin_view_users } from './pages/Admin_view_users';
 
 function App() {
   const [auth, setAuth] = useState(true);
@@ -42,8 +43,7 @@ function App() {
         if (response.data.success) {
           setAuth(true);
           setRole(response.data.user.role); //comentar esto
-          //setRole("admin")
-          //setRole("user")
+          // setRole("admin")
         }
       }).catch(function (error) {
         Swal.fire(
@@ -72,7 +72,7 @@ function App() {
                 <Route path='/' element={<Clients_products_page />}></Route>
                 <Route path='/carrito' element={<Cart_products_page />}></Route>
                 <Route path='/orden' element={<Order_products_page />}></Route>
-                
+
                 <Route path='/productos' element={<Clients_products_page />}></Route>
                 <Route path='*' element={<NotFound />}></Route>
               </Routes>
@@ -80,11 +80,12 @@ function App() {
               <>
                 <HeaderAdmin></HeaderAdmin >
                 <Routes>
-                  <Route path='/' element={<Dashboard />}></Route>
+                  <Route path='/' element={<Admin_view_products />}></Route>
                   <Route path='/ventas' element={<Sales_page />}></Route>
                   <Route path='/nuevo_producto' element={<New_product_page />}></Route>
                   <Route path='/administrar_productos' element={<Admin_view_products />}></Route>
                   <Route path='/update/producto/:id' element={<Update_product></Update_product>}></Route>
+                  <Route path='/usuarios' element={<Admin_view_users></Admin_view_users>}></Route>
                   <Route path='*' element={<NotFound />}></Route>
                 </Routes>
               </>

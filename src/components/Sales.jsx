@@ -1,5 +1,4 @@
-//import React, { useEffect, useState } from 'react'
-import useFetch from '../hooks/useFetch';
+import React, { useEffect, useState } from 'react'
 import { SaleRow } from './SaleRow'
 
 
@@ -7,7 +6,8 @@ import { SaleRow } from './SaleRow'
 export const Sales = () => {
     const ruta = "http://localhost:4000/api/admin/orders"
 
-    const { isLoading, products } = useFetch(ruta,true);
+    const { isLoading, products } = useFetch(ruta);
+    console.log("hola");
     console.log(products);
     console.log(products.cantidadTotal);
 
