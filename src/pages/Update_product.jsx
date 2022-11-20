@@ -34,7 +34,7 @@ export const Update_product = () => {
             setIsLoading(false);
             console.log("laruta")
             if (!result.success) {
-                navigate("/nuevo_producto")
+                navigate("/")
             } else {
                 console.log(result);
                 setName(result.product.name);
@@ -47,29 +47,31 @@ export const Update_product = () => {
         loadData();
     }, []);
 
-    const delete_product = () => {
+    const delete_product = (e) => {
+        e.preventDefault();
         const options = {
             method: 'DELETE',
             url: ruta,
             withCredentials: true
         }
-
-        Axios.request(options).then((response) => {
-            console.log(response);
-            navigate("/")
-            /*if(response.data.success){
-                Swal.fire(
-                    'Bien!',
-                    'Has eliminado el producto!',
-                    'success'
-                    )    
-                    setProducts({products:newData});
+        Swal.fire({
+            title: 'Realmente desea eliminar este producto?',
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: 'Yes',
+            denyButtonText: 'No',
+            customClass: {
+                confirmButton: 'order-2',
+                denyButton: 'order-3',
             }
-        
-        }).catch((error) => {
-           console.log(error)
-        });
-        */
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Axios.request(options).then((response) => {
+                    navigate("/")
+                })
+            } else if (result.isDenied) {
+                Swal.fire('No se eliminó el producto', '', 'info')
+            }
         })
     }
 

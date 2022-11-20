@@ -24,9 +24,12 @@ export const ProductAdmin = ({id,name,price,img}) => {
               <Button variant='contained' color="primary" startIcon={<Edit />} href={`/update/producto/${id}`} >
               Editar
               </Button>
+              {/*
+              //Falta implementar el borrado en esta interfaz
               <Button variant='contained' color="secondary" startIcon={<Delete />}>
               Eliminar
               </Button>
+             */}
             </Stack>
           </div>
         </div>

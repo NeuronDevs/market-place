@@ -40,7 +40,6 @@ function App() {
       };
 
       Axios.request(options).then(function (response) {
-        console.log(response);
         if (response.data.success) {
           setAuth(true);
           setRole(response.data.user.role); //comentar esto
