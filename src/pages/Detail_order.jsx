@@ -13,71 +13,69 @@ const Detail_order = () => {
                 .then(response => response.json())
                 .then(datos => datos)
             setIsLoading(false);
-            console.log(result);
             setOrder(result.order);
         }
         loadData();
     }, []);
 
     return (
-        <div>
-            {
-                isLoading ?
-                    <div>Cargando información de factura</div>
-                    :
-                    <div>
-                        <h1>Detalle de orden de compra</h1>
-                        <div>Factura n&uacute;mero:</div>
-                        <div>{order._id}</div>
-                        <div>Fecha de la venta:</div>
-                        <div>{order.creationDate}</div>
-                        <div>Usuario:</div>
-                        <div>{order.user.email}</div>
-                        <div>Direcci&oacute;n:</div>
-                        <div>{order.orderInfo.direction}</div>
-                        <div>Tel&eacute;fono:</div>
-                        <div>{order.orderInfo.phone}</div>
-                        <div>Ciudad:</div>
-                        <div>{order.orderInfo.city}</div>
-                        <div>Total factura:</div>
-                        <div>{order.totalPrice}</div>
-
+        <main>
+            <div className="container">
+                {
+                    isLoading ?
+                        <div>Cargando información de factura</div>
+                        :
                         <div className="row">
-                            <div className="col mt-5">
-                                <div className="table-responsive">
-                                    <table className="table mx-auto align-middle">
-                                        <thead>
-                                            <tr>
-                                                <th>Cant</th>
-                                                <th>Imagen</th>
-                                                <th>Nombre</th>
-                                                <th>Precio unitario</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {
-                                                order.items.map(product => (
-                                                    <tr>
-                                                        <td>{product.cant}</td>
-                                                        <td><img src={product.images} height="90" width="90" alt={product.name} /></td>
-                                                        <td>{product.name}</td>
-                                                        <td>{product.price}</td>
-                                                        <td>{product.cant*product.price}</td>
-                                                    </tr>
-                                                ))
-                                            }
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <h2 className="my-5">Orden de compra # {order._id}</h2>
+                            <div className="col-2 my-2"><strong>Fecha de la venta:</strong></div>
+                            <div className="col-4 my-2">{order.creationDate}</div>
+                            <div className="col-2 my-2"><strong>Usuario:</strong></div>
+                            <div className="col-4 my-2">{order.user.email}</div>
+                            <div className="col-2 my-2"><strong>Direcci&oacute;n:</strong></div>
+                            <div className="col-4 my-2">{order.orderInfo.direction}</div>
+                            <div className="col-2 my-2"><strong>Tel&eacute;fono:</strong></div>
+                            <div className="col-4 my-2">{order.orderInfo.phone}</div>
+                            <div className="col-2 my-2"><strong>Ciudad:</strong></div>
+                            <div className="col-4 my-2">{order.orderInfo.city}</div>
+                            <div className="col-2 my-2"><strong>Total venta:</strong></div>
+                            <div className="col-4 my-2">${new Intl.NumberFormat().format(order.totalPrice)}</div>
+                            <h4 className="pt-4 pt-5">Productos:</h4>
+                            <div className="row">
+                                <div className="col mt-5">
+                                    <div className="table-responsive">
+                                        <table className="table mx-auto align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Cantidad</th>
+                                                    <th>Imagen</th>
+                                                    <th>Nombre</th>
+                                                    <th>Precio unitario</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {
+                                                    order.items.map(product => (
+                                                        <tr>
+                                                            <td>{product.cant}</td>
+                                                            <td><img src={product.images} height="90" width="90" alt={product.name} /></td>
+                                                            <td>{product.name}</td>
+                                                            <td>${new Intl.NumberFormat().format(product.price)}</td>
+                                                            <td>${new Intl.NumberFormat().format(product.cant * product.price)}</td>
+                                                        </tr>
+                                                    ))
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div >
                             </div >
-                        </div >
 
-                    </div>
-            }
+                        </div>
+                }
 
-
-        </div>
+            </div>
+        </main>
     )
 }
 

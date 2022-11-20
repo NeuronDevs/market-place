@@ -33,7 +33,7 @@ export const Sales = () => {
                     }
                     <tr>
                         <td align="center" colSpan="2"><b>Total</b></td>
-                        <td align="right"><b>${products.cantidadTotal}</b></td>
+                        <td align="right"><b>${new Intl.NumberFormat().format(products.cantidadTotal)}</b></td>
                     </tr>
                 </tbody>
             </table>

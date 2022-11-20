@@ -10,7 +10,7 @@ export const SaleRow = ({ id, date , total }) => {
         <tr>
             <td>{date}</td>
             <td><Link to={`/orden/${id}`}>{id}</Link></td>
-            <td align="right">${total}</td>
+            <td align="right">${new Intl.NumberFormat().format(total)}</td>
         </tr>
     )
 }
