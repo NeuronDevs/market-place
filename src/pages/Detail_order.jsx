@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
+
 import { useParams } from 'react-router-dom';
+import Axios from 'axios';
 
 const Detail_order = () => {
+    const navigate = useNavigate();
     const params = useParams();
     const ruta = `http://localhost:4000/api/order/${params.id}`
+    const ruta_delete = `http://localhost:4000/api/admin/order/${params.id}`
     const [isLoading, setIsLoading] = useState(true);
     const [order, setOrder] = useState({});
 
@@ -18,6 +24,33 @@ const Detail_order = () => {
         loadData();
     }, []);
 
+    const delete_order = () => {
+        const options = {
+            method: 'DELETE',
+            url: ruta_delete,
+            withCredentials: true
+        }
+        Swal.fire({
+            title: 'Realmente desea anular esta venta?',
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: 'Yes',
+            denyButtonText: 'No',
+            customClass: {
+                confirmButton: 'order-2',
+                denyButton: 'order-3',
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Axios.request(options).then((response) => {
+                    navigate("/ventas")
+                })
+            } else if (result.isDenied) {
+                Swal.fire('No se eliminó la orden', '', 'info')
+            }
+        })
+    }
+
     return (
         <main>
             <div className="container">
@@ -26,7 +59,8 @@ const Detail_order = () => {
                         <div>Cargando información de factura</div>
                         :
                         <div className="row">
-                            <h2 className="my-5">Orden de compra # {order._id}</h2>
+                            <div className="col-10 my-5"><h2>Orden de compra # {order._id}</h2></div>
+                            <div className="col-2 my-5"><button onClick={delete_order} className='btn mt-2 btn-danger'>Anular venta</button></div>
                             <div className="col-2 my-2"><strong>Fecha de la venta:</strong></div>
                             <div className="col-4 my-2">{order.creationDate}</div>
                             <div className="col-2 my-2"><strong>Usuario:</strong></div>

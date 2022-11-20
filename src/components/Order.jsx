@@ -94,7 +94,7 @@ export const Order = () => {
 
         saveOrder(bodyOrder);
 
-
+        localStorage.setItem('cart', JSON.stringify([]));
 
     };
 

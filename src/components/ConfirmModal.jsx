@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, {  useState, useEffect } from 'react'
 
 export const ConfirmModal = (props) => {
-
     const [cantP, setCantP] = useState(1);
     const [totalProducts, setTotalProducts] = useState(cantP * props.price);
     const [readyToShop, setReadyToShop] = useState(false);
+    const [id,setId]=useState(props.idModal);
     const addToCart = () => {
         setReadyToShop(true);
-        //document.querySelector(`#${props.idModal}`).hide();
     }
     useEffect(() => {
         function getCart() {
@@ -40,7 +39,7 @@ export const ConfirmModal = (props) => {
             setCartInSession(cartSession);
         }
         setReadyToShop(false);
-    }, [readyToShop])
+        }, [readyToShop])
     return (
         <div className="modal fade" id={props.idModal} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
@@ -52,13 +51,13 @@ export const ConfirmModal = (props) => {
                     <div className="modal-body">
                         <img src={props.images} style={{ maxHeight: "300px" }} className="p-2 rounded mx-auto d-block props.img-fluid" alt="..." />
                         <input defaultValue={cantP} min={1} max={props.lot} onChange={e => { setCantP(e.target.value); setTotalProducts(e.target.value * props.price); }} type="number" />
-                        <h5>Precio: {props.price}</h5>
+                        <h5>Precio: ${new Intl.NumberFormat().format(props.price)}</h5>
                         <p>Quedan {props.lot}</p>
-                        <p>Total: {totalProducts}</p>
+                        <p>Total: ${new Intl.NumberFormat().format(totalProducts)}</p>
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" onClick={addToCart} className="btn btn-primary">Agregar al carrito</button>
+                        <button type="button" onClick={addToCart} className="btn btn-primary"  data-bs-dismiss="modal" >Agregar al carrito</button>
                     </div>
                 </div>
             </div>

@@ -41,12 +41,13 @@ export const ItemProduct = ({ id, name, products, setProducts }) => {
     return (
         <div  className="d-flex">
         <li >
-            <Link to ={`/update/producto/${id}`}>
+            <Link to ={`/update/producto/${id}`} style={{textDecoration: 'none'}}>
             <h5  className="nav-link link-dark" aria-current="page">{name}</h5>
             </Link>
         </li>
-        <button onClick={handleDelete} className='btn m-2 btn-sm btn-danger'>eliminar</button>
-            </div>
+        {/*<button onClick={handleDelete} className='btn m-2 btn-sm btn-danger'>eliminar</button>
+        */}
+        </div>
 
     )
 }

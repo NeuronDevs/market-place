@@ -18,7 +18,7 @@ export const ProductAdmin = ({id,name,price,img}) => {
           </div>
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
-            <p className="card-text">{price}</p>
+            <p className="card-text">${new Intl.NumberFormat().format(price)}</p>
             
             <Stack direction="row" spacing={1} className='justify_text'>
               <Button variant='contained' color="primary" startIcon={<Edit />} href={`/update/producto/${id}`} >

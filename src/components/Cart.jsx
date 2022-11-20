@@ -85,8 +85,8 @@ export const Cart = () => {
                                             <td>{product.cant}</td>
                                             <td><img src={product.images} height="90" width="90" alt={product.name} /></td>
                                             <td>{product.name}</td>
-                                            <td>{product.price}</td>
-                                            <td>{product.total}</td>
+                                            <td>${new Intl.NumberFormat().format(product.price)}</td>
+                                            <td>${new Intl.NumberFormat().format(product.total)}</td>
                                             <td><button className="btn btn-danger" onClick={() => { remove(product.id) }}>Quitar</button></td>
                                         </tr>
                                     ))
