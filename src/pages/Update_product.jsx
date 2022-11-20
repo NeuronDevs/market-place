@@ -15,7 +15,7 @@ export const Update_product = () => {
     const [price, setPrice] = useState(10000);
     const [stock, setStock] = useState(1);
     const [description, setDescription] = useState("");
-
+    const [images, setImages] =useState("");
 
     const ruta = `http://localhost:4000/api/producto/${params.id}`
  
@@ -35,6 +35,7 @@ const [products, setProducts] = useState([]);
             setDescription(result.product.description);
             setPrice(result.product.price);
             setStock(result.product.stock);
+            setImages(result.product.images[0]?.url);
         }
         loadData();
     }, []);
@@ -54,7 +55,7 @@ const [products, setProducts] = useState([]);
             "stock": stock,
             "images":[{
                 "public_id":"0",
-                "url": "https://dlcdnwebimgs.asus.com/gain/e94c945e-6374-44a3-a21b-62943a64f103/"
+                "url": images
             }]
             },
             withCredentials: true
@@ -89,7 +90,7 @@ const [products, setProducts] = useState([]);
 
     return (
     <div>
-    <EditProduct  price={price} setDescription={setDescription} setName={setName} setStock={setStock} setPrice={setPrice} description={description} name={name} stock={stock} img={'../NO_PHOTO.png'} nuevo_producto={update_product} ></EditProduct>
+    <EditProduct  price={price} setDescription={setDescription} setName={setName} setStock={setStock} setPrice={setPrice} description={description} name={name} stock={stock} images={images} setImages={setImages} nuevo_producto={update_product} ></EditProduct>
 
     </div>
   )

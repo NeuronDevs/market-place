@@ -10,6 +10,7 @@ const New_product_page = () => {
     const [price, setPrice] = useState(10000);
     const [stock, setStock] = useState(1);
     const [description, setDescription] = useState("");
+    const [images, setImages] = useState("../NO_PHOTO.png");
 
     const nuevo_producto = (e) => {
         e.preventDefault();
@@ -23,7 +24,7 @@ const New_product_page = () => {
             "stock": stock,
             "images":[{
                 "public_id":"0",
-                "url": "https://dlcdnwebimgs.asus.com/gain/e94c945e-6374-44a3-a21b-62943a64f103/"
+                "url": images
             }]
             },
             withCredentials: true
@@ -69,7 +70,7 @@ const New_product_page = () => {
             <div class="b-example-divider b-example-vr"></div>
             <div class="container">
             <h2 class="text-center p-2">Nuevo producto</h2>
-            <EditProduct  price={price} setDescription={setDescription} setName={setName} setStock={setStock} setPrice={setPrice} description={description} name={name} stock={stock} img={'../NO_PHOTO.png'} nuevo_producto={nuevo_producto} ></EditProduct>
+            <EditProduct  price={price} setDescription={setDescription} setName={setName} setStock={setStock} setPrice={setPrice} description={description} name={name} stock={stock} images={images} setImages={setImages} nuevo_producto={nuevo_producto} ></EditProduct>
             </div>
 
 

@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-export const EditProduct = ({ id, name, setName, price, setPrice, description, setDescription, stock, setStock, img, nuevo_producto }) => {
+export const EditProduct = ({ id, name, setName, price, setPrice, description, setDescription, stock, setStock, images ,setImages , nuevo_producto }) => {
 
   return (
     <div class="row mb-3 text-center">
       <div class="col-md-6 px-5">
-            <img class="col-md-9" src={img} alt="..." />
+            <img class="col-md-9" src={images} alt="..." />
             <div class="mb-3">
               <label for="productImage" class="form-label">Imagen del producto</label>
-              <input type="file" class="form-control" id="productImage" />
+              <input type="text" onChange={(e)=>{setImages(e.target.value)}} class="form-control" value={images} />
             </div>
       </div>
       <div class="col-md-6 py-3 d-flex justify-content-evenly align-items-center text-center">

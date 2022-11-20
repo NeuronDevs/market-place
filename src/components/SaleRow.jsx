@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 //import { ConfirmModal } from './ConfirmModal'
 
 export const SaleRow = ({ id, date , total }) => {
@@ -8,7 +9,7 @@ export const SaleRow = ({ id, date , total }) => {
     return (
         <tr>
             <td>{date}</td>
-            <td><a href="#">{id}</a></td>
+            <td><Link to={`/orden/${id}`}>{id}</Link></td>
             <td align="right">${total}</td>
         </tr>
     )
