@@ -64,7 +64,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 * **Sergio Alejandro Quintero Puentes** - *[ Desarrollador ]* - [@Sergioqp82](https://github.com/sergioqp82)
 
----
 
 _<p align="center">NeuronDevs - Copyright© 2022.</p>_
 
